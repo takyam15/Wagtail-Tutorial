@@ -1,7 +1,5 @@
 Django>=3.0,<3.1
 wagtail>=2.9,<2.10
 psycopg2
-factory-boy
 django-environ
-django-bootstrap4
 gunicorn
