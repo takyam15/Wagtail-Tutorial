@@ -1,12 +1,7 @@
-import environ
-
 from .base import *
 
-env = environ.Env()
-env.read_env('.env')
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.get_value('DEBUG')
+DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.get_value('SECRET_KEY')
