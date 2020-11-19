@@ -4,7 +4,7 @@ LABEL maintainer="hello@wagtail.io"
 
 # Set environment varibles
 ENV PYTHONUNBUFFERED 1
-ENV DJANGO_ENV dev
+ENV DJANGO_ENV "dev"
 
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --upgrade pip
@@ -15,8 +15,6 @@ RUN pip install -r /code/requirements.txt
 COPY . /code/
 # Set the working directory to /code/
 WORKDIR /code/
-
-RUN python manage.py migrate
 
 RUN useradd wagtail
 RUN chown -R wagtail /code
